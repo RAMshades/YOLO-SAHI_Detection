@@ -51,3 +51,19 @@ Edit the  [Train_Data_Slicer.py](Train_Data_Slicer.py) to the file paths and out
 > | Height_overlap,Width_overlap | Amount of overlap in height and width of new, smaller images in %/100 |
 > | class_names | class names and ids, e.g., 0: 'Name' |
 
+### Step 4
+Create a .yaml file of the new directory. Example below:
+
+```
+# Dataset root directory
+path: Sliced_images
+
+# Train/val/test sets: specify directories, *.txt files, or lists
+train: images # images for training
+val: images
+
+nc: 1
+# Classes (example using 80 COCO classes)
+names:
+    0: depression
+```
