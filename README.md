@@ -47,8 +47,8 @@ Edit the  [Train_Data_Slicer.py](Train_Data_Slicer.py) to the file paths and out
 > | small_labels_dir | New directory for the labels of the smaller images. |
 > | output_json_path | COCO JSON file of the original YOLO annotations. This is necessary for SAHI to slice the data. |
 > | json_file_path | New JSON file that converts from the COCO format back to YOLO to train the YOLO models (smaller images) |
-> | New_height,New_Width | Number of pixels in height and width of new, smaller images |
-> | Height_overlap,Width_overlap | Amount of overlap in height and width of new, smaller images in %/100 |
+> | New_height, New_Width | Number of pixels in height and width of new, smaller images |
+> | Height_overlap, Width_overlap | Amount of overlap in height and width of new, smaller images in %/100 |
 > | class_names | class names and ids, e.g., 0: 'Name' |
 
 ### Step 4)
@@ -91,8 +91,8 @@ Edit the [pred_yolo_sahi.py](pred_yolo_sahi.py) to the file paths and desired pa
 >| dir_image_path | Directory for the large image you want to predict. |
 > | model_weights | File that contains the trained weights of the YOLO model, usually .pt file. |
 > | det_threshold | Threshold for detection (confidence score). |
-> | device | Device to run precictions on (e.g., "cpu" or "cuda:0"). |
-> | Image_height,Image_width | Image height and width of the smaller slices SAHI uses. |
+> | device | Device to run predictions on (e.g., "cpu" or "cuda:0"). |
+> | Image_height, Image_width | Image height and width of the smaller slices SAHI uses. |
 > | Overlap_height,Overlap_width | Amount of overlap of the smaller images in %/100 |
 > | crop_image | True or False if you want to crop the individual detected object and save it as a new .png file. This will allow you to do more unsupervised work later.|
 > | cropped_image_dir | Directory for cropped image. |
@@ -104,3 +104,12 @@ Edit the [imagehash.py](imagehash.py) to apply feature extraction to the cropped
 >| -------- | -------- | 
 >| cropped_images_path | String of the directory that points toward the cropped images. |
 >| output_features_name | Name of the file that outputs the features extracted from each image crop. |
+
+### Step 8)
+Run [Crop_clustering.m](Crop_clustering.m) in MATLAB to cluster the cropped image features. Please note, I switched to MATLAB here because I am more comfortable with it. If you don't have MATLAB, I suggest using [clustimage](https://github.com/erdogant/clustimage), [scikit-learn](https://scikit-learn.org/stable/), or any other Python-based clustering package. In the MATLAB file, I go deeper into the analysis I did in the paper.
+
+## Citation
+To learn more about the use of this, please check out the paper here. If you find this useful or implement parts of the above code, consider citing the work behind this.
+```
+McCarthy, R. A., 
+```
