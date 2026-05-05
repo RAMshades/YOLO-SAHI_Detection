@@ -1,5 +1,7 @@
 ultralytics
 sahi
 numpy
-pandas
 pillow
+pyplot
+clustimage
+imagehash
