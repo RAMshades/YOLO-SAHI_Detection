@@ -17,7 +17,7 @@ https://docs.ultralytics.com/quickstart/
 Then install the other packages:
 
 ```
-pip install sahi numpy pandas
+pip install sahi numpy imagehash clustimage matplotlib
 ```
 
 ## Base Models
