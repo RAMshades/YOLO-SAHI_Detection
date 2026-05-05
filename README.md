@@ -62,8 +62,8 @@ path: Sliced_images
 train: images # images for training
 val: images
 
-nc: 1
+nc: 1 # number of classes
 # Classes (example using 80 COCO classes)
 names:
-    0: depression
+    0: Name
 ```
