@@ -63,13 +63,19 @@ train: images # images for training
 val: test # images for testing
 
 nc: 1 # number of classes
-# Classes (example using 80 COCO classes)
+# Classes id number and name
 names:
     0: Name
 ```
 
 ### Step 5
-Train your model using [train.py](train.py).
+Train your model using [Train.py](Train.py). You will need to set the following parameters in the file:
+> [!NOTE]
+>| Variable | Description |
+>| -------- | -------- | 
+>| model | Base model that is downloaded from above. |
+> | yaml_file | The .yaml file that was made in step 4 for the model to use for training and validation. |
+> | perf_file | File name to save the performance of the model. This can be used to see the performance curves of the model. |
 
 ### Step 6
 Edit the [pred_yolo_sahi.py](pred_yolo_sahi.py) to the file paths and desired parameters. I point out a few of the variables below:
