@@ -40,8 +40,9 @@ Edit the  [Train_Data_Slicer.py](Train_Data_Slicer.py) to the file paths and out
 
 > [!NOTE]
 >| Variable | Description |
->| -------- | -------- | -------- | -------- |
-> 
+>| -------- | -------- | 
+>|image_dir | Directory for the large image you labeled. |
+> | -------- | -------- | 
 > image_dir -> Directory for the large image you labeled.
 > yolo_label_dir -> Directory to the txt files with the same names as the images, this should be in a yolo format.
 > small_images_dir -> New directory for the smaller labeled images
