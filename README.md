@@ -36,7 +36,7 @@ Download or fork the repository and install the requirements.txt. I personally l
 Use your favorite annotation software (e.g., MATLAB image labeler, CVAT, LabelImg, etc.) and export annotations into a YOLO format. This should provide you with (class_id, x_center, y_center, width, height). 
 
 ### Step 3) 
-Edit the  [Train_Data_Slicer.py](Train_Data_Slicer.py) to the file paths and outputs you want. I point out a few of the variables below here:
+Edit the  [Train_Data_Slicer.py](Train_Data_Slicer.py) to the file paths and outputs you want. I point out a few of the variables below:
 
 > [!NOTE]
 >| Variable | Description |
@@ -69,5 +69,17 @@ names:
 ```
 
 ### Step 5
+Edit the [pred_yolo_sahi.py](pred_yolo_sahi.py) to the file paths and desired parameters. I point out a few of the variables below:
 
+> [!NOTE]
+>| Variable | Description |
+>| -------- | -------- | 
+>| dir_image_path | Directory for the large image you want to predict. |
+> | model_weights | File that contains the trained weights of the YOLO model, usually .pt file. |
+> | det_threshold | Threshold for detection (confidence score). |
+> | device | Device to run precictions on (e.g., "cpu" or "cuda:0"). |
+> | Image_height,Image_width | Image height and width of the smaller slices SAHI uses. |
+> | Overlap_height,Overlap_width | Amount of overlap of the smaller images in %/100 |
+> | crop_image | True or False if you want to crop the individual detected object and save it as a new .png file. This will allow you to do more unsupervised work later.|
+> | cropped_image_dir | Directory for cropped image. |
 
