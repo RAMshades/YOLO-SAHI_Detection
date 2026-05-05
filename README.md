@@ -56,14 +56,18 @@ Create a .yaml file of the new directory. Example below:
 
 ```
 # Dataset root directory
-path: Sliced_images
+path: Sliced_images # directory where the training/testing/and validation folders are
 
 # Train/val/test sets: specify directories, *.txt files, or lists
 train: images # images for training
-val: images
+val: test # images for testing
 
 nc: 1 # number of classes
 # Classes (example using 80 COCO classes)
 names:
     0: Name
 ```
+
+### Step 5
+
+
