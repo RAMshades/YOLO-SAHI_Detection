@@ -19,3 +19,10 @@ Then install the other packages:
 ```
 pip install sahi numpy pandas
 ```
+
+## Base Models
+Please go to Ultralytics at: https://docs.ultralytics.com/models/ and select the YOLO models you want. We specifically chose YOLO models 9-10 and have provided the specific links to the models here:
+
+| YOLO 8 | YOLO 9 | YOLO 10 | YOLO 11 |
+| -------- | -------- | -------- | -------- |
+| [YOLO8L](https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8l.pt) | [YOLO9L](https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov9c.pt) | [YOLO10L](https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov10l.pt) | [YOLO11L](https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo11l.pt) |
