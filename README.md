@@ -1,5 +1,5 @@
 # YOLO-SAHI_Detection
-This work provides code that combines YOLO and SAHI for large-scale imagery.
+This work provides code that combines YOLO and SAHI for large-scale imagery. This code was originally used to train you-only-look-once (YOLO) models with sliced aided hyper inference (SAHI) to localize and detect small objects in synthetic aperture sonar (SAS) imagery. This work can be extended to wide-area imagery with a few tweaks to the code.
 
 # Instructions
 ## Installation
