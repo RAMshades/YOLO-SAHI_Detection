@@ -1,16 +1,30 @@
 from ultralytics import YOLO
 import pickle
 
-# Names of the base models
-names = ['yolov8l.pt','yolov9c.pt','yolov10l.pt','yolo11l.pt']
+# Parameters
+model_name = 'yolov8l.pt'
+yaml_file = 'File.yaml'
+perf_file = 'valinfo.pkl'
 
-# stepping through each base model and training
-for name in names:
-    model = YOLO(name)
-    results = model.train(data="File.yaml", epochs=50, imgsz=1024,batch=16)
+## model training parameters
+epochs = 50
+imgsz = 1024
+batch = 16
 
+## Test and save performance curves
+test_model = True
+output_test_file = 'valinfo.pkl'
+
+# Load in the base model
+model = YOLO('yolo11l.pt')
+
+# Train the model and return the results
+results = model.train(data="File.yaml", epochs=epochs, imgsz=imgsz,batch=batch)
+
+if test_model: 
+    # test the model
     mod_info = model.val()
 
     # Save the testing data results to a file
-    with open(name[:-3]'_valinfo.pkl', 'wb') as f:
+    with open(output_test_file, 'wb') as f:
         pickle.dump(mod_info, f)
