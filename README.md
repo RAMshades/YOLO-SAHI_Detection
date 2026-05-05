@@ -10,7 +10,7 @@ pip install requirements.txt
 ```
 
 ## Manual Installation
-If you want to manually install the ultralytics package you can do so by going to the website and finding the conda version you want. Link provided here:
+If you want to manually install the Ultralytics package, you can do so by going to the website and finding the conda version you want. Link provided here:
 
 https://docs.ultralytics.com/quickstart/
 
@@ -28,3 +28,23 @@ Please go to Ultralytics at: https://docs.ultralytics.com/models/ and select the
 | [YOLO8L](https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8l.pt) | [YOLO9L](https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov9c.pt) | [YOLO10L](https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov10l.pt) | [YOLO11L](https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo11l.pt) |
 
 # How to Use
+
+### Step 1) 
+Download or fork the repository and install the requirements.txt. I personally like to do so in an Anaconda environment so as not to have to deal with any package issues.
+
+### Step 2) 
+Use your favorite annotation software (e.g., MATLAB image labeler, CVAT, LabelImg, etc.) and export annotations into a YOLO format. This should provide you with (class_id, x_center, y_center, width, height). 
+
+### Step 3) 
+Edit the  [Train_Data_Slicer.py](Train_Data_Slicer.py) to the file paths and outputs you want. I point out a few of the variables below here:
+
+> [!NOTE]
+> image_dir -> Directory for the large image you labeled.
+> yolo_label_dir -> Directory to the txt files with the same names as the images, this should be in a yolo format.
+> small_images_dir -> New directory for the smaller labeled images
+> small_labels_dir -> New directory for the labels of the smaller images
+> output_json_path -> COCO JSON file of the original YOLO annotations. This is necessary for SAHI to slice the data
+> json_file_path -> New JSON file that converts from the COCO format back to YOLO to train the YOLO models (smaller images)
+> New_height,New_Width -> Number of pixels in height and width of new, smaller images
+> Height_overlap,Width_overlap -> Amount of overlap in height and width of new, smaller images in %/100
+> class_names -> class names and ids, e.g., 0: 'Name'
