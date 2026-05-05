@@ -2,6 +2,6 @@ ultralytics
 sahi
 numpy
 pillow
-pyplot
+matplotlib
 clustimage
 imagehash
