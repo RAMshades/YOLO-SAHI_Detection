@@ -73,9 +73,14 @@ Train your model using [Train.py](Train.py). You will need to set the following 
 > [!NOTE]
 >| Variable | Description |
 >| -------- | -------- | 
->| model | Base model that is downloaded from above. |
+>| model_name | Base model that is downloaded from above. |
 > | yaml_file | The .yaml file that was made in step 4 for the model to use for training and validation. |
 > | perf_file | File name to save the performance of the model. This can be used to see the performance curves of the model. |
+> |epochs| Number of training epochs. |
+> |imgsz| Adjusted size of each image for YOLO model. |
+> |batch| Batch size of images to use for training. |
+> |test_model| Test the model with the testing data defined in .yaml. |
+> |output_test_file| File name to save the testing performance of the model. |
 
 ### Step 6
 Edit the [pred_yolo_sahi.py](pred_yolo_sahi.py) to the file paths and desired parameters. I point out a few of the variables below:
