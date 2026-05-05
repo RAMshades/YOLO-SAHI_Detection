@@ -83,7 +83,7 @@ Train your model using [Train.py](Train.py). You will need to set the following 
 > |output_test_file| File name to save the testing performance of the model. |
 
 ### Step 6)
-Edit the [pred_yolo_sahi.py](pred_yolo_sahi.py) to the file paths and desired parameters. I point out a few of the variables below:
+Edit [pred_yolo_sahi.py](pred_yolo_sahi.py) to the file paths and desired parameters. I point out a few of the variables below:
 
 > [!NOTE]
 >| Variable | Description |
@@ -98,7 +98,7 @@ Edit the [pred_yolo_sahi.py](pred_yolo_sahi.py) to the file paths and desired pa
 > | cropped_image_dir | Directory for cropped image. |
 
 ### Step 7) 
-Edit the [imagehash.py](imagehash.py) to apply feature extraction to the cropped images through wavelet hashing. 
+Edit [imagehashing.py](imagehashing.py) to apply feature extraction to the cropped images through wavelet hashing. 
 > [!NOTE]
 >| Variable | Description |
 >| -------- | -------- | 
