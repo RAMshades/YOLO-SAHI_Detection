@@ -69,6 +69,9 @@ names:
 ```
 
 ### Step 5
+Train your model using [train.py](train.py).
+
+### Step 6
 Edit the [pred_yolo_sahi.py](pred_yolo_sahi.py) to the file paths and desired parameters. I point out a few of the variables below:
 
 > [!NOTE]
