@@ -2,3 +2,4 @@ ultralytics
 sahi
 numpy
 pandas
+pillow
