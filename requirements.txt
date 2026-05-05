@@ -3,5 +3,5 @@ sahi
 numpy
 pillow
 matplotlib
-clustimage
+scipy
 imagehash
