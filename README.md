@@ -42,13 +42,12 @@ Edit the  [Train_Data_Slicer.py](Train_Data_Slicer.py) to the file paths and out
 >| Variable | Description |
 >| -------- | -------- | 
 >|image_dir | Directory for the large image you labeled. |
-> | -------- | -------- | 
-> image_dir -> Directory for the large image you labeled.
-> yolo_label_dir -> Directory to the txt files with the same names as the images, this should be in a yolo format.
-> small_images_dir -> New directory for the smaller labeled images
-> small_labels_dir -> New directory for the labels of the smaller images
-> output_json_path -> COCO JSON file of the original YOLO annotations. This is necessary for SAHI to slice the data
-> json_file_path -> New JSON file that converts from the COCO format back to YOLO to train the YOLO models (smaller images)
-> New_height,New_Width -> Number of pixels in height and width of new, smaller images
-> Height_overlap,Width_overlap -> Amount of overlap in height and width of new, smaller images in %/100
-> class_names -> class names and ids, e.g., 0: 'Name'
+> | yolo_label_dir | Directory to the txt files with the same names as the images, this should be in a yolo format. |
+> | small_images_dir | New directory for the smaller labeled images. |
+> | small_labels_dir | New directory for the labels of the smaller images. |
+> | output_json_path | COCO JSON file of the original YOLO annotations. This is necessary for SAHI to slice the data. |
+> | json_file_path | New JSON file that converts from the COCO format back to YOLO to train the YOLO models (smaller images) |
+> | New_height,New_Width | Number of pixels in height and width of new, smaller images |
+> | Height_overlap,Width_overlap | Amount of overlap in height and width of new, smaller images in %/100 |
+> | class_names | class names and ids, e.g., 0: 'Name' |
+
