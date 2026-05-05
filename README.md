@@ -106,7 +106,7 @@ Edit [imagehashing.py](imagehashing.py) to apply feature extraction to the cropp
 >| output_features_name | Name of the file that outputs the features extracted from each image crop. |
 
 ### Step 8)
-Run [Crop_clustering.m](Crop_clustering.m) in MATLAB to cluster the cropped image features. Please note, I switched to MATLAB here because I am more comfortable with it. If you don't have MATLAB, I suggest using [clustimage](https://github.com/erdogant/clustimage), [scikit-learn](https://scikit-learn.org/stable/), or any other Python-based clustering package. In the MATLAB file, I go deeper into the analysis I did in the paper.
+Run [Cropped_clustering.m](Cropped_clustering.m) in MATLAB to cluster the cropped image features. Please note, I switched to MATLAB here because I am more comfortable with it. If you don't have MATLAB, I suggest using [clustimage](https://github.com/erdogant/clustimage), [scikit-learn](https://scikit-learn.org/stable/), or any other Python-based clustering package. In the MATLAB file, I go deeper into the analysis I did in the paper.
 
 ## Citation
 To learn more about the use of this, please check out the paper here. If you find this useful or implement parts of the above code, consider citing the work behind this.
