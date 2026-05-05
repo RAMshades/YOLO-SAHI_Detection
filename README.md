@@ -97,3 +97,10 @@ Edit the [pred_yolo_sahi.py](pred_yolo_sahi.py) to the file paths and desired pa
 > | crop_image | True or False if you want to crop the individual detected object and save it as a new .png file. This will allow you to do more unsupervised work later.|
 > | cropped_image_dir | Directory for cropped image. |
 
+### Step 7) 
+Edit the [imagehash.py](imagehash.py) to apply feature extraction to the cropped images through wavelet hashing. 
+> [!NOTE]
+>| Variable | Description |
+>| -------- | -------- | 
+>| cropped_images_path | String of the directory that points toward the cropped images. |
+>| output_features_name | Name of the file that outputs the features extracted from each image crop. |
