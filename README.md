@@ -108,6 +108,18 @@ Edit [imagehashing.py](imagehashing.py) to apply feature extraction to the cropp
 ### Step 8)
 Run [Cropped_clustering.m](Cropped_clustering.m) in MATLAB to cluster the cropped image features. Please note, I switched to MATLAB here because I am more comfortable with it. If you don't have MATLAB, I suggest using [clustimage](https://github.com/erdogant/clustimage), [scikit-learn](https://scikit-learn.org/stable/), or any other Python-based clustering package. In the MATLAB file, I go deeper into the analysis I did in the paper.
 
+> [!NOTE]
+>| Variable | Description |
+>| -------- | -------- | 
+>| px, py | Resolution of pixels in any units (I use meters). |
+>| cropped_image_dir | Image directory to your cropped images from the previous code. |
+> | feature_data_name| Name of the file with the features that were extracted from previous code.|
+> | area_limits| Limits to the sizes that you are looking for. This should be (lower upper) values. |
+> | step_size| Bin size of grouping for your area sizes. |
+> | area_groups| The search and bins of the areas you want to cluster. |
+> | number_clusters_explore| Number of K-means clusters to explore, starting from 2 clusters. |
+> | save_name| File name to save to for the information on clustering. Can be used to do further analysis.|
+
 ## Citation
 To learn more about the use of this, please check out the paper here. If you find this useful or implement parts of the above code, consider citing the work behind this.
 ```
