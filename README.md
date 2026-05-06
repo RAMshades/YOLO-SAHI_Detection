@@ -21,7 +21,7 @@ pip install sahi numpy imagehash scipy matplotlib
 ```
 
 ## Base Models
-Please go to Ultralytics at: https://docs.ultralytics.com/models/ and select the YOLO models you want. We specifically chose YOLO models 9-10 and have provided the specific links to the models here:
+Please go to Ultralytics at: https://docs.ultralytics.com/models/ and select the YOLO models you want. We specifically chose YOLO models 8-10 for simplicity and have provided the specific links to the models here:
 
 | YOLO 8 | YOLO 9 | YOLO 10 | YOLO 11 |
 | -------- | -------- | -------- | -------- |
