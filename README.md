@@ -30,7 +30,7 @@ Please go to Ultralytics at: https://docs.ultralytics.com/models/ and select the
 # How to Use
 
 ### Step 1) 
-Download or fork the repository and install the requirements.txt. I personally like to do so in an Anaconda environment so as not to have to deal with any package issues.
+Download or fork the repository and install the requirements.txt. I personally like to do so in an Anaconda environment so as not to have to worry about any package issues.
 
 ### Step 2) 
 Use your favorite annotation software (e.g., MATLAB image labeler, CVAT, LabelImg, etc.) and export annotations into a YOLO format. This should provide you with (class_id, x_center, y_center, width, height). 
