@@ -20,7 +20,7 @@ https://docs.ultralytics.com/quickstart/
 Then install the other packages:
 
 ```
-pip install sahi numpy imagehash scipy matplotlib
+pip install sahi numpy pillow imagehash scipy matplotlib
 ```
 
 ## Base Models
