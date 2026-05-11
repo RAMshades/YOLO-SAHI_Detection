@@ -55,21 +55,27 @@ Edit the  [Train_Data_Slicer.py](Train_Data_Slicer.py) to the file paths and out
 > | class_names | class names and ids, e.g., 0: 'Name' |
 
 ### Step 4)
-Create a .yaml file of the new directory. Example below:
+Data should be structured for training and validation, as seen below.
+
+![Data Structure.](Folder Data Structure YOLO.png)
+
+From this structure, we create a .yaml file pointing to the directory. Example below:
 
 ```
 # Dataset root directory
-path: Sliced_images # directory where the training/testing/and validation folders are
+path: Root/Data # directory where the training and validation folders are
 
-# Train/val/test sets: specify directories, *.txt files, or lists
-train: images # images for training
-val: test # images for testing
+# Train/val/test sets: specify directories
+train: Images/Train # images for training
+val: Images/Test # images for testing
 
 nc: 1 # number of classes
 # Classes id number and name
 names:
     0: Name
 ```
+
+
 
 ### Step 5)
 Train your model using [Train.py](Train.py). You will need to set the following parameters in the file:
