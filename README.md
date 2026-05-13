@@ -57,7 +57,7 @@ Edit the  [Train_Data_Slicer.py](Train_Data_Slicer.py) to the file paths and out
 ### Step 4)
 Data should be structured for training and validation, as seen below.
 
-<img src="Folder_Data_Structure_YOLO.png" width="100" height="100"/>
+<img src="Folder_Data_Structure_YOLO.png" width="200" height="200"/>
 
 From this structure, we create a .yaml file pointing to the directory. Example below:
 
