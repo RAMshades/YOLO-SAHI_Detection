@@ -169,5 +169,5 @@ McCarthy, Ryan; Merrifield, Sophia; Terrill, Eric (2026), “SAS Acoustic Imager
 ## Citation
 To learn more about the use of this, please check out the paper here. If you find this useful or implement parts of the above code, consider citing the work behind this.
 ```
-McCarthy, R. A., 
+McCarthy, R. A., Merrifield, S. T., and Terrill, E. J. "Seabed Debris Detection and Classification in Synthetic Aperture Sonar Data using YOLO+SAHI," [in prep] 2026.
 ```
