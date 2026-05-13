@@ -67,7 +67,7 @@ path: Root/Data # directory where the training and validation folders are
 
 # Train/val/test sets: specify directories
 train: Images/Train # images for training
-val: Images/Test # images for testing
+val: Images/Val # images for testing
 
 nc: 1 # number of classes
 # Classes id number and name
