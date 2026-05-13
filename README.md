@@ -41,10 +41,10 @@ Please go to Ultralytics at: https://docs.ultralytics.com/models/ and select the
 # How to Use
 
 ### Step 1) 
-Download or fork the repository and install the requirements.txt. I personally like to do so in an Anaconda environment so as not to have to worry about any package issues.
+Download or fork the repository and install the requirements.txt.
 
 ### Step 2) 
-Use your favorite annotation software (e.g., MATLAB image labeler, CVAT, LabelImg, etc.) and export annotations into a YOLO format. This should provide you with (class_id, x_center, y_center, width, height). 
+If you are using your own data to train, use your favorite annotation software (e.g., MATLAB image labeler, CVAT, LabelImg, etc.) and export annotations into a YOLO format. This should provide you with (class_id, x_center, y_center, width, height). 
 
 ### Step 3) 
 Edit the  [Train_Data_Slicer.py](Train_Data_Slicer.py) to the file paths and outputs you want. I point out a few of the variables below:
@@ -61,6 +61,12 @@ Edit the  [Train_Data_Slicer.py](Train_Data_Slicer.py) to the file paths and out
 > | New_height, New_Width | Number of pixels in height and width of new, smaller images |
 > | Height_overlap, Width_overlap | Amount of overlap in height and width of new, smaller images in %/100 |
 > | class_names | class names and ids, e.g., 0: 'Name' |
+
+Run the Python script in your terminal.
+
+```
+python Train_Data_Slicer.py
+```
 
 ### Step 4)
 Data should be structured for training and validation, as seen below.
@@ -83,8 +89,6 @@ names:
     0: Name
 ```
 
-
-
 ### Step 5)
 Train your model using [Train.py](Train.py). You will need to set the following parameters in the file:
 > [!NOTE]
@@ -98,6 +102,12 @@ Train your model using [Train.py](Train.py). You will need to set the following 
 > |batch| Batch size of images to use for training. |
 > |test_model| Test the model with the testing data defined in .yaml. |
 > |output_test_file| File name to save the testing performance of the model. |
+
+Run the Python script in your terminal.
+
+```
+python Train.py
+```
 
 ### Step 6)
 Edit [pred_yolo_sahi.py](pred_yolo_sahi.py) to the file paths and desired parameters. I point out a few of the variables below:
@@ -114,6 +124,12 @@ Edit [pred_yolo_sahi.py](pred_yolo_sahi.py) to the file paths and desired parame
 > | crop_image | True or False if you want to crop the individual detected object and save it as a new .png file. This will allow you to do more unsupervised work later.|
 > | cropped_image_dir | Directory for cropped image. |
 
+Run the Python script in your terminal.
+
+```
+python pred_yolo_sahi.py
+```
+
 ### Step 7) 
 Edit [imagehashing.py](imagehashing.py) to apply feature extraction to the cropped images through wavelet hashing. 
 > [!NOTE]
@@ -121,6 +137,12 @@ Edit [imagehashing.py](imagehashing.py) to apply feature extraction to the cropp
 >| -------- | -------- | 
 >| cropped_images_path | String of the directory that points toward the cropped images. |
 >| output_features_name | Name of the file that outputs the features extracted from each image crop. |
+
+Run the Python script in your terminal.
+
+```
+python imagehashing.py
+```
 
 ### Step 8)
 Run [Cropped_clustering.m](Cropped_clustering.m) in MATLAB to cluster the cropped image features. Please note, I switched to MATLAB here because I am more comfortable with it. If you don't have MATLAB, I suggest using [clustimage](https://github.com/erdogant/clustimage), [scikit-learn](https://scikit-learn.org/stable/), or any other Python-based clustering package. In the MATLAB file, I go deeper into the analysis I did in the paper.
