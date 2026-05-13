@@ -12,6 +12,14 @@ To install the required Python packages, use:
 pip install requirements.txt
 ```
 
+Alternatively, I like to use Anaconda to handle any differences or issues that come up with packages. You can use the code below in an Anaconda prompt:
+
+'''
+conda create -n ObjDetEnv
+conda activate ObjDetEnv
+pip install requirements.txt
+'''
+
 ## Manual Installation
 If you want to manually install the Ultralytics package, you can do so by going to the website and finding the conda version you want. Link provided here:
 
