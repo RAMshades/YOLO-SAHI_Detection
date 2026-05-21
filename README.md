@@ -159,12 +159,6 @@ Run [Cropped_clustering.m](Cropped_clustering.m) in MATLAB to cluster the croppe
 > | number_clusters_explore| Number of K-means clusters to explore, starting from 2 clusters. |
 > | save_name| File name to save to for the information on clustering. Can be used to do further analysis.|
 
-## Data 
-We provide data that was used to train the small-object detection algorithm for our publiction at: 
-
-```
-McCarthy, Ryan; Merrifield, Sophia; Terrill, Eric (2026), “SAS Acoustic Imagery Dataset to Train Small-Object Detection”, Mendeley Data, V1, doi: 10.17632/3sr9ddgbrf.1
-```
 
 ## Citation
 To learn more about the use of this, please check out the paper here. If you find this useful or implement parts of the above code, consider citing the work behind this.
