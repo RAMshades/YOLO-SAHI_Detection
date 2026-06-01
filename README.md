@@ -71,7 +71,7 @@ python Train_Data_Slicer.py
 ### Step 4)
 Data should be structured for training and validation, as seen below.
 
-<img src="Folder_Data_Structure_YOLO.png" width="400" height="400"/>
+<img src="Folder_Data_SAS_Format.png" width="400" height="400"/>
 
 From this structure, we create a .yaml file pointing to the directory. Example below:
 
